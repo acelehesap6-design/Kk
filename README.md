@@ -25,7 +25,7 @@ KK Exchange, kripto para, forex ve hisse senetleri için gelişmiş bir trading 
 
 ### Gereksinimler
 - Node.js 18+
-- pnpm (önerilen) veya npm
+- npm
 - PostgreSQL (opsiyonel, token işlemleri için)
 
 ### Hızlı Başlangıç
@@ -38,12 +38,12 @@ cd Kk
 
 2. **Bağımlılıkları yükleyin:**
 ```bash
-pnpm install
+npm install
 ```
 
 3. **Geliştirme sunucusunu başlatın:**
 ```bash
-pnpm dev
+npm run dev
 ```
 
 4. **Tarayıcınızda açın:**
@@ -54,8 +54,30 @@ http://localhost:3000
 ### Production Build
 
 ```bash
-pnpm build
+npm run build
 ```
+
+### GitHub Pages Deployment
+
+Proje otomatik olarak GitHub Actions ile GitHub Pages'e deploy edilir:
+
+1. **GitHub Pages Ayarları:**
+   - Repository Settings > Pages
+   - Source: "GitHub Actions" seçin
+   - Workflow dosyası: `.github/workflows/deploy.yml`
+
+2. **Otomatik Deployment:**
+   - `main` branch'e push yapıldığında otomatik deploy
+   - Build süreci: Next.js static export
+   - Deploy URL: `https://acelehesap6-design.github.io/Kk/`
+
+3. **Manuel Deployment:**
+   ```bash
+   # Değişiklikleri commit edin
+   git add .
+   git commit -m "Update"
+   git push origin main
+   ```
 
 ## 📁 Proje Yapısı
 
