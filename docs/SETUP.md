@@ -7,6 +7,8 @@
 
 ## Kurulum Adımları
 
+### Yerel Kurulum
+
 1. Bağımlılıkları yükleyin:
 ```bash
 pnpm install
@@ -39,6 +41,44 @@ BYBIT_API_SECRET=your_bybit_secret
 ```bash
 pnpm dev
 ```
+
+### Docker ile Kurulum
+
+1. Docker Compose dosyasını kullanarak tüm servisleri başlatın:
+```bash
+docker-compose up -d
+```
+
+Bu komut aşağıdaki servisleri başlatacaktır:
+- Web uygulaması (Next.js)
+- PostgreSQL veritabanı
+- Supabase
+- Market servisleri
+
+2. Veritabanı migration'larını çalıştırın:
+```bash
+docker-compose exec web pnpm prisma migrate deploy
+```
+
+3. Uygulama şu adreste çalışıyor olacaktır:
+```
+http://localhost:3000
+```
+
+4. Servisleri durdurmak için:
+```bash
+docker-compose down
+```
+
+### Geliştirme Kontrolleri
+
+Kurulumdan sonra aşağıdaki kontrolleri yapın:
+
+1. Web uygulamasına erişim: http://localhost:3000
+2. API endpoints çalışıyor mu: http://localhost:3000/api/health
+3. WebSocket bağlantısı: ws://localhost:3000/ws
+4. Veritabanı bağlantısı: PostgreSQL console veya GUI aracı ile kontrol
+5. Market API'ları: Her bir market için test emirleri gönderin
 
 ## Market Entegrasyonları
 

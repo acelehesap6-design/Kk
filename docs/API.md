@@ -2,16 +2,65 @@
 
 ## Endpoints
 
+### Kimlik Doğrulama
+
+#### Giriş Yapma
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email": string,
+  "password": string
+}
+```
+
+Başarılı yanıt:
+```json
+{
+  "token": "JWT_TOKEN",
+  "user": {
+    "id": string,
+    "email": string
+  }
+}
+```
+
+#### Kayıt Olma
+```http
+POST /api/auth/register
+Content-Type: application/json
+
+{
+  "email": string,
+  "password": string,
+  "name": string
+}
+```
+
 ### Token İşlemleri
 
 #### Token Satın Alma
 ```http
 POST /api/token/purchase
 Content-Type: application/json
+Authorization: Bearer JWT_TOKEN
 
 {
   "amount": number,
   "paymentMethod": "crypto" | "fiat"
+}
+```
+
+#### Token Satma
+```http
+POST /api/token/sell
+Content-Type: application/json
+Authorization: Bearer JWT_TOKEN
+
+{
+  "amount": number,
+  "receiveMethod": "crypto" | "fiat"
 }
 ```
 

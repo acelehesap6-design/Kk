@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -10,6 +11,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   swcMinify: true,
+  output: 'export',
+  basePath: '/Kk',
+  assetPrefix: '/Kk/',
 }
 
 module.exports = nextConfig
