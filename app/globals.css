@@ -12,207 +12,177 @@
 
     --background: 0 0% 100%;    --background: 222.2 84% 4.9%;
 
-    --foreground: 222.2 84% 4.9%;    --foreground: 210 40% 98%;
+    --foreground: 240 10% 3.9%;    --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+     --card: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;    --card-foreground: 210 40% 98%;
+    --muted: 240 4.8% 95.9%;    --card-foreground: 210 40% 98%;
 
-    --card-foreground: 222.2 84% 4.9%;    --popover: 222.2 84% 4.9%;
+    --muted-foreground: 240 3.8% 46.1%;    --popover: 222.2 84% 4.9%;
 
      --popover-foreground: 210 40% 98%;
 
     --popover: 0 0% 100%;    --primary: 217.2 91.2% 59.8%;
 
-    --popover-foreground: 222.2 84% 4.9%;    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 240 10% 3.9%;    --primary-foreground: 222.2 47.4% 11.2%;
 
      --secondary: 217.2 32.6% 17.5%;
 
-    --primary: 222.2 47.4% 11.2%;    --secondary-foreground: 210 40% 98%;
+    --card: 0 0% 100%;    --secondary-foreground: 210 40% 98%;
 
-    --primary-foreground: 210 40% 98%;    --muted: 217.2 32.6% 17.5%;
+    --card-foreground: 240 10% 3.9%;    --muted: 217.2 32.6% 17.5%;
 
      --muted-foreground: 215 20.2% 65.1%;
 
-    --secondary: 210 40% 96.1%;    --accent: 217.2 32.6% 17.5%;
+    --border: 240 5.9% 90%;    --accent: 217.2 32.6% 17.5%;
 
-    --secondary-foreground: 222.2 47.4% 11.2%;    --accent-foreground: 210 40% 98%;
+    --input: 240 5.9% 90%;    --accent-foreground: 210 40% 98%;
 
      --destructive: 0 62.8% 30.6%;
 
-    --muted: 210 40% 96.1%;    --destructive-foreground: 210 40% 98%;
+    --primary: 240 5.9% 10%;    --destructive-foreground: 210 40% 98%;
 
-    --muted-foreground: 215.4 16.3% 46.9%;    --border: 217.2 32.6% 17.5%;
+    --primary-foreground: 0 0% 98%;    --border: 217.2 32.6% 17.5%;
 
      --input: 217.2 32.6% 17.5%;
 
-    --accent: 210 40% 96.1%;    --ring: 224.3 76.3% 48%;
+    --secondary: 240 4.8% 95.9%;    --ring: 224.3 76.3% 48%;
 
-    --accent-foreground: 222.2 47.4% 11.2%;  }
-
- }
-
-    --destructive: 0 84.2% 60.2%;
-
-    --destructive-foreground: 210 40% 98%;@layer base {
-
-  * {
-
-    --border: 214.3 31.8% 91.4%;    @apply border-border;
-
-    --input: 214.3 31.8% 91.4%;  }
-
-    --ring: 222.2 84% 4.9%;  body {
-
-     @apply bg-background text-foreground;
-
-    --radius: 0.5rem;  }
-
-  }}
-
- 
-
-  .dark {/* Trading View Custom Theme */
-
-    --background: 222.2 84% 4.9%;:root {
-
-    --foreground: 210 40% 98%;  --tv-color-platform-background: #0a0a0a;
-
-   --tv-color-pane-background: #1a1a1a;
-
-    --card: 222.2 84% 4.9%;  --tv-color-toolbar-button-background-hover: #2a2a2a;
-
-    --card-foreground: 210 40% 98%;  --tv-color-toolbar-button-background-secondary-hover: #2a2a2a;
-
-   --tv-color-toolbar-button-background-expanded: #2a2a2a;
-
-    --popover: 222.2 84% 4.9%;  --tv-color-toolbar-button-text: #dcdcdc;
-
-    --popover-foreground: 210 40% 98%;  --tv-color-toolbar-button-text-hover: #ffffff;
-
-   --tv-color-toolbar-button-text-active: #2196f3;
-
-    --primary: 210 40% 98%;  --tv-color-toolbar-button-text-active-hover: #1976d2;
-
-    --primary-foreground: 222.2 47.4% 11.2%;}
-
- 
-
-    --secondary: 217.2 32.6% 17.5%;/* Custom Scrollbar */
-
-    --secondary-foreground: 210 40% 98%;::-webkit-scrollbar {
-
-   width: 8px;
-
-    --muted: 217.2 32.6% 17.5%;  height: 8px;
-
-    --muted-foreground: 215 20.2% 65.1%;}
-
- 
-
-    --accent: 217.2 32.6% 17.5%;::-webkit-scrollbar-track {
-
-    --accent-foreground: 210 40% 98%;  background: #1a1a1a;
+    --secondary-foreground: 240 5.9% 10%;  }
 
  }
 
-    --destructive: 0 62.8% 30.6%;
+    --accent: 240 4.8% 95.9%;
 
-    --destructive-foreground: 210 40% 98%;::-webkit-scrollbar-thumb {
+    --accent-foreground: 240 5.9% 10%;@layer base {
 
-   background: #333;
+   * {
 
-    --border: 217.2 32.6% 17.5%;  border-radius: 4px;
+    --destructive: 0 72.2% 50.6%;    @apply border-border;
 
-    --input: 217.2 32.6% 17.5%;}
+    --destructive-foreground: 0 0% 98%;  }
 
-    --ring: 212.7 26.8% 83.9%;
+   body {
 
-  }::-webkit-scrollbar-thumb:hover {
+    --ring: 240 5% 64.9%;    @apply bg-background text-foreground;
 
-}  background: #444;
+   }
 
- }
-
-@layer base {
-
-  * {/* Chart Customization */
-
-    @apply border-border;.tradingview-widget-container {
-
-  }  border-radius: 0.5rem;
-
-  body {  overflow: hidden;
-
-    @apply bg-background text-foreground;}
+    --radius: 0.5rem;}
 
   }
 
-}/* Order Book Styles */
+ /* Trading View Custom Theme */
 
-.order-book-row {
+  .dark {:root {
 
-.tremor-Card-root {  @apply grid grid-cols-3 gap-2 py-1 text-sm;
+    --background: 240 10% 3.9%;  --tv-color-platform-background: #0a0a0a;
 
-  @apply bg-white dark:bg-gray-800 shadow-md;}
+    --foreground: 0 0% 98%;  --tv-color-pane-background: #1a1a1a;
 
+   --tv-color-toolbar-button-background-hover: #2a2a2a;
+
+    --muted: 240 3.7% 15.9%;  --tv-color-toolbar-button-background-secondary-hover: #2a2a2a;
+
+    --muted-foreground: 240 5% 64.9%;  --tv-color-toolbar-button-background-expanded: #2a2a2a;
+
+   --tv-color-toolbar-button-text: #dcdcdc;
+
+    --popover: 240 10% 3.9%;  --tv-color-toolbar-button-text-hover: #ffffff;
+
+    --popover-foreground: 0 0% 98%;  --tv-color-toolbar-button-text-active: #2196f3;
+
+   --tv-color-toolbar-button-text-active-hover: #1976d2;
+
+    --card: 240 10% 3.9%;}
+
+    --card-foreground: 0 0% 98%;
+
+ /* Custom Scrollbar */
+
+    --border: 240 3.7% 15.9%;::-webkit-scrollbar {
+
+    --input: 240 3.7% 15.9%;  width: 8px;
+
+   height: 8px;
+
+    --primary: 0 0% 98%;}
+
+    --primary-foreground: 240 5.9% 10%;
+
+ ::-webkit-scrollbar-track {
+
+    --secondary: 240 3.7% 15.9%;  background: #1a1a1a;
+
+    --secondary-foreground: 0 0% 98%;}
+
+ 
+
+    --accent: 240 3.7% 15.9%;::-webkit-scrollbar-thumb {
+
+    --accent-foreground: 0 0% 98%;  background: #333;
+
+   border-radius: 4px;
+
+    --destructive: 0 62.8% 30.6%;}
+
+    --destructive-foreground: 0 85.7% 97.3%;
+
+ ::-webkit-scrollbar-thumb:hover {
+
+    --ring: 240 3.7% 15.9%;  background: #444;
+
+  }}
+
+}
+
+ /* Chart Customization */
+
+@layer base {.tradingview-widget-container {
+
+  * {  border-radius: 0.5rem;
+
+    @apply border-border;  overflow: hidden;
+
+  }}
+
+  body {
+
+    @apply bg-background text-foreground;/* Order Book Styles */
+
+  }.order-book-row {
+
+}  @apply grid grid-cols-3 gap-2 py-1 text-sm;
 }
 
 .order-book-buy {
-
-.tremor-Select-root {  @apply text-green-500;
-
-  @apply w-full;}
-
+  @apply text-green-500;
 }
 
 .order-book-sell {
-
-.tremor-Tab-root {  @apply text-red-500;
-
-  @apply px-4 py-2 text-sm font-medium;}
-
+  @apply text-red-500;
 }
 
 .depth-bar {
-
-.tremor-TabList-root {  @apply absolute top-0 bottom-0 opacity-10 z-0;
-
-  @apply bg-gray-100 dark:bg-gray-700 rounded-lg p-1;}
-
+  @apply absolute top-0 bottom-0 opacity-10 z-0;
 }
 
 .depth-bar-buy {
-
-.tremor-Badge-root {  @apply bg-green-500 right-0;
-
-  @apply px-2 py-1 text-xs font-medium rounded-full;}
-
+  @apply bg-green-500 right-0;
 }
 
 .depth-bar-sell {
-
-.tremor-Text-root {  @apply bg-red-500 left-0;
-
-  @apply text-gray-600 dark:text-gray-300;}
-
+  @apply bg-red-500 left-0;
 }
 
 /* Trading Form */
+.trading-input {
+  @apply bg-gray-800 border border-gray-700 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
 
-.tremor-Title-root {.trading-input {
-
-  @apply text-gray-900 dark:text-white;  @apply bg-gray-800 border border-gray-700 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
-
-}}
-
-
-
-.tremor-Metric-root {.trading-button {
-
-  @apply text-2xl font-semibold text-gray-900 dark:text-white;  @apply px-4 py-2 rounded font-semibold transition-colors duration-200;
-
-}}
+.trading-button {
+  @apply px-4 py-2 rounded font-semibold transition-colors duration-200;
+}
 
 .trading-button-buy {
   @apply bg-green-600 hover:bg-green-700 text-white;
