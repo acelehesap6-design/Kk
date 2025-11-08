@@ -209,9 +209,7 @@ export default function Home() {
                           showGridLines={false}
                           showXAxis={false}
                           showYAxis={false}
-                          height="h
-
--24"
+                          height="h-24"
                         />
                       </Card>
                     ))}

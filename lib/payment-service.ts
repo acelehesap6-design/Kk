@@ -1,10 +1,21 @@
-import Stripe from 'stripe'
+// import Stripe from 'stripe'
 import { supabase } from './supabase'
 import type { Tables } from './supabase'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2023-10-16'
-})
+// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+//   apiVersion: '2023-10-16'
+// })
+
+// Mock Stripe for development
+const stripe = {
+  paymentIntents: {
+    create: async (params: any) => ({ id: 'pi_mock', client_secret: 'pi_mock_secret' }),
+    confirm: async (id: string) => ({ status: 'succeeded' })
+  },
+  customers: {
+    create: async (params: any) => ({ id: 'cus_mock' })
+  }
+}
 
 export class PaymentService {
   // Create payment intent

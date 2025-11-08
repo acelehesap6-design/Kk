@@ -1,193 +1,141 @@
-@tailwind base;@tailwind base;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@tailwind components;@tailwind components;
-
-@tailwind utilities;@tailwind utilities;
-
- 
-
-@layer base {@layer base {
-
-  :root {  :root {
-
-    --background: 0 0% 100%;    --background: 222.2 84% 4.9%;
-
-    --foreground: 240 10% 3.9%;    --foreground: 210 40% 98%;
-
-     --card: 222.2 84% 4.9%;
-
-    --muted: 240 4.8% 95.9%;    --card-foreground: 210 40% 98%;
-
-    --muted-foreground: 240 3.8% 46.1%;    --popover: 222.2 84% 4.9%;
-
-     --popover-foreground: 210 40% 98%;
-
-    --popover: 0 0% 100%;    --primary: 217.2 91.2% 59.8%;
-
-    --popover-foreground: 240 10% 3.9%;    --primary-foreground: 222.2 47.4% 11.2%;
-
-     --secondary: 217.2 32.6% 17.5%;
-
-    --card: 0 0% 100%;    --secondary-foreground: 210 40% 98%;
-
-    --card-foreground: 240 10% 3.9%;    --muted: 217.2 32.6% 17.5%;
-
-     --muted-foreground: 215 20.2% 65.1%;
-
-    --border: 240 5.9% 90%;    --accent: 217.2 32.6% 17.5%;
-
-    --input: 240 5.9% 90%;    --accent-foreground: 210 40% 98%;
-
-     --destructive: 0 62.8% 30.6%;
-
-    --primary: 240 5.9% 10%;    --destructive-foreground: 210 40% 98%;
-
-    --primary-foreground: 0 0% 98%;    --border: 217.2 32.6% 17.5%;
-
-     --input: 217.2 32.6% 17.5%;
-
-    --secondary: 240 4.8% 95.9%;    --ring: 224.3 76.3% 48%;
-
-    --secondary-foreground: 240 5.9% 10%;  }
-
- }
-
-    --accent: 240 4.8% 95.9%;
-
-    --accent-foreground: 240 5.9% 10%;@layer base {
-
-   * {
-
-    --destructive: 0 72.2% 50.6%;    @apply border-border;
-
-    --destructive-foreground: 0 0% 98%;  }
-
-   body {
-
-    --ring: 240 5% 64.9%;    @apply bg-background text-foreground;
-
-   }
-
-    --radius: 0.5rem;}
-
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
   }
 
- /* Trading View Custom Theme */
-
-  .dark {:root {
-
-    --background: 240 10% 3.9%;  --tv-color-platform-background: #0a0a0a;
-
-    --foreground: 0 0% 98%;  --tv-color-pane-background: #1a1a1a;
-
-   --tv-color-toolbar-button-background-hover: #2a2a2a;
-
-    --muted: 240 3.7% 15.9%;  --tv-color-toolbar-button-background-secondary-hover: #2a2a2a;
-
-    --muted-foreground: 240 5% 64.9%;  --tv-color-toolbar-button-background-expanded: #2a2a2a;
-
-   --tv-color-toolbar-button-text: #dcdcdc;
-
-    --popover: 240 10% 3.9%;  --tv-color-toolbar-button-text-hover: #ffffff;
-
-    --popover-foreground: 0 0% 98%;  --tv-color-toolbar-button-text-active: #2196f3;
-
-   --tv-color-toolbar-button-text-active-hover: #1976d2;
-
-    --card: 240 10% 3.9%;}
-
-    --card-foreground: 0 0% 98%;
-
- /* Custom Scrollbar */
-
-    --border: 240 3.7% 15.9%;::-webkit-scrollbar {
-
-    --input: 240 3.7% 15.9%;  width: 8px;
-
-   height: 8px;
-
-    --primary: 0 0% 98%;}
-
-    --primary-foreground: 240 5.9% 10%;
-
- ::-webkit-scrollbar-track {
-
-    --secondary: 240 3.7% 15.9%;  background: #1a1a1a;
-
-    --secondary-foreground: 0 0% 98%;}
-
- 
-
-    --accent: 240 3.7% 15.9%;::-webkit-scrollbar-thumb {
-
-    --accent-foreground: 0 0% 98%;  background: #333;
-
-   border-radius: 4px;
-
-    --destructive: 0 62.8% 30.6%;}
-
-    --destructive-foreground: 0 85.7% 97.3%;
-
- ::-webkit-scrollbar-thumb:hover {
-
-    --ring: 240 3.7% 15.9%;  background: #444;
-
-  }}
-
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
 }
 
- /* Chart Customization */
-
-@layer base {.tradingview-widget-container {
-
-  * {  border-radius: 0.5rem;
-
-    @apply border-border;  overflow: hidden;
-
-  }}
-
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
-
-    @apply bg-background text-foreground;/* Order Book Styles */
-
-  }.order-book-row {
-
-}  @apply grid grid-cols-3 gap-2 py-1 text-sm;
+    @apply bg-background text-foreground;
+  }
 }
 
-.order-book-buy {
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Animation classes */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+/* Trading specific styles */
+.price-up {
   @apply text-green-500;
 }
 
-.order-book-sell {
+.price-down {
   @apply text-red-500;
 }
 
-.depth-bar {
-  @apply absolute top-0 bottom-0 opacity-10 z-0;
+.price-neutral {
+  @apply text-muted-foreground;
 }
 
-.depth-bar-buy {
-  @apply bg-green-500 right-0;
+/* Chart container */
+.chart-container {
+  @apply w-full h-full min-h-[400px];
 }
 
-.depth-bar-sell {
-  @apply bg-red-500 left-0;
+/* Responsive table */
+.table-responsive {
+  @apply overflow-x-auto;
 }
 
-/* Trading Form */
-.trading-input {
-  @apply bg-gray-800 border border-gray-700 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+.table-responsive table {
+  @apply min-w-full;
 }
 
-.trading-button {
-  @apply px-4 py-2 rounded font-semibold transition-colors duration-200;
+/* Loading spinner */
+.loading-spinner {
+  @apply animate-spin rounded-full border-2 border-primary border-t-transparent;
 }
 
-.trading-button-buy {
-  @apply bg-green-600 hover:bg-green-700 text-white;
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
 }
 
-.trading-button-sell {
-  @apply bg-red-600 hover:bg-red-700 text-white;
+.gradient-secondary {
+  background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary) / 0.8) 100%);
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-sm bg-background/80 border border-border/50;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-200 hover:shadow-lg hover:shadow-primary/25;
 }

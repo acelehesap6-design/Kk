@@ -25,17 +25,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-          
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+          cache: 'npm'
           
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
         
       - name: Build with Next.js
-        run: pnpm build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://demo.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: demo_key
+        
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
