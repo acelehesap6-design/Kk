@@ -15,7 +15,7 @@ const TradingViewWidget = dynamic(
 
 export default function ForexMarket() {
   const [selectedPair, setSelectedPair] = useState('EURUSD')
-  const [orderType, setOrderType] = useState('limit')
+  const [orderType, setOrderType] = useState<'limit' | 'market'>('limit')
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">

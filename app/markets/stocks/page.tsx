@@ -15,7 +15,7 @@ const TradingViewWidget = dynamic(
 
 export default function StocksMarket() {
   const [selectedSymbol, setSelectedSymbol] = useState('AAPL')
-  const [orderType, setOrderType] = useState('limit')
+  const [orderType, setOrderType] = useState<'limit' | 'market'>('limit')
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
